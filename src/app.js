@@ -1,8 +1,9 @@
 require("dotenv-safe").config()
 const express = require("express")
 const cors = require("cors")
-const database = require("./config/mongoConnect")
-const indexRouter = require("./routes/indexRoutes")
+const database = require("./config/database")
+const profissionalRoutes = require("./routes/profissionalRoutes")
+const pacienteRoutes = require("./routes/pacienteRoutes")
 
 const app = express()
 
@@ -10,6 +11,7 @@ app.use(express.json())
 app.use(cors())
 database.connect()
 
-app.use(indexRouter)
+app.use(pacienteRoutes)
+app.use(profissionalRoutes)
 
 module.exports = app
