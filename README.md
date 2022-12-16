@@ -1,3 +1,11 @@
+<br>
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/109764888/208189019-7abfeed7-ec37-4c1e-ac06-9ea15ea74e68.png" width="350px" />
+</div>
+
+# Projeto livre - reprograma 
+
 # GESTA-CARE
 
 ## Tema
