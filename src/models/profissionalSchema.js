@@ -1,25 +1,26 @@
 const mongoose = require('mongoose');
 
 const profissionalSchema = new mongoose.Schema({
-    id: {
-        type: mongoose.Types.ObjectId,
-        default: mongoose.Types.ObjectId
-    },
     nome: {
         type: String,
         required: true
     },
     coren: {
         type: String,
-        required: false
+        required: false,
+       
+
     },
     crm: {
         type: String,
-        required: false
+        required: false,
+        
+
     },
     cpf: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     telefone: {
         type: String,
@@ -38,7 +39,8 @@ const profissionalSchema = new mongoose.Schema({
             municipio: String,
             estado: String,
             pais: String
-        }
+        },
+        required: false
     }
 }, { timestamps: true })
 

@@ -4,6 +4,7 @@ const cors = require("cors")
 const database = require("./config/database")
 const profissionalRoutes = require("./routes/profissionalRoutes")
 const pacienteRoutes = require("./routes/pacienteRoutes")
+const consultaRoutes = require("./routes/consultaRoutes")
 
 const app = express()
 
@@ -13,5 +14,6 @@ database.connect()
 
 app.use(pacienteRoutes)
 app.use(profissionalRoutes)
+app.use(consultaRoutes)
 
 module.exports = app

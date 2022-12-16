@@ -1,11 +1,13 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router()
+
 
 const controller = require('../controllers/profissionalController');
 
-router.post('/profissional/criar', controller.casdatrarProfissional);
-router.get('/profissional/buscar', controller.buscarProfissional);
+router.post('/profissional/cadastrar', controller.casdatrarProfissional);
+router.get('/profissionais', controller.obterTodosProfissionais);
+router.get('/profissional/obter', controller.obterProfissional);
 router.get('/profissional/:id', controller.obterProfissionalPorId);
+router.put('/profissional/:id', controller.atualizarProfissional);
 router.delete('/profissional/:id', controller.deletarProfissional);
 
 

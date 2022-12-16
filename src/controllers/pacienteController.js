@@ -118,7 +118,7 @@ const deletarPaciente = async (req, res) => {
         await paciente.delete();
 
         res.status(200).json({
-            mensagem: `Cadastro da paciente deletado.`
+            mensagem: `Cadastro da paciente deletado com sucesso.`
         })
     } catch (error) {
         res.status(400).json({
